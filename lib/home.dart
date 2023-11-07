@@ -20,13 +20,19 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Column(
-        children: [
+        children: <Widget>[
+          Image.asset(
+            'images/lake.jpg',
+            width: 600,
+            height: 300,
+            fit: BoxFit.cover,
+          ),
           Padding(
             padding: EdgeInsets.all(30),
             child: Column(
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
