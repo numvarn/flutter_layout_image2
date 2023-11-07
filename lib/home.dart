@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -17,14 +19,14 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Column(
+      body: Column(
         children: [
           Padding(
             padding: EdgeInsets.all(30),
             child: Column(
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,7 +125,20 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
+                  'Alps. Situated 1,578 meters above sea level, it is one of the '
+                  'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
+                  'half-hour walk through pastures and pine forest, leads you to the '
+                  'lake, which warms to 20 degrees Celsius in the summer. Activities '
+                  'enjoyed here include rowing, and riding the summer toboggan run.',
+                  softWrap: true,
+                  style: TextStyle(fontSize: 18),
+                ),
               ],
             ),
           ),
